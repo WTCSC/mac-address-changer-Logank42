@@ -3,6 +3,4 @@
 
 
 Extra credit:
-    -Figure out linux machine mac adress (ip addr command maybe?)
     -Random Mac adress generator
-    -Function allowing for back up of original Mac adress (Store in a .txt file?)

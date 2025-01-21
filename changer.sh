@@ -22,7 +22,7 @@ adress_validation() {
 
 mac=$2
 
-if [ "$1" != "" ]; then # Checks that there is an argument and then run the adress_validation
+if [ "$1" != "" ]; then # Checks that there is an argument and then run the adress_validation function
     adress_validation "$1" "$mac"
 
 else # Prints an error if there is no arguement
