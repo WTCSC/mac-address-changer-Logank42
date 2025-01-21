@@ -6,8 +6,8 @@ new_address() {
     ip link set dev "$1" up # Turns the network interface on
 }
 
-random_address() {
-    random=$(echo $RANDOM|md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\).*$/02:\1:\2:\3:\4:\5/')
+random_address() { # Does the same as new_address, but instead of your input, it takes the randomly generated mac address
+    random=$(echo $RANDOM|md5sum|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\).*$/02:\1:\2:\3:\4:\5/') # Generates random mac address using $RANDOM
     ip link set dev "$1" down
     ip link set dev "$1" address "$random"
     ip link set dev "$1" up
@@ -34,9 +34,9 @@ if [ "$1" = "" ]; then # Checks that there is an argument and prints error messa
     echo "Error. Must have a valid mac address or -r command"
     exit 1
 
-elif [ "$mac" = "-r" ]; then
+elif [ "$mac" = "-r" ]; then # Checks for the -r arguement and run random_address if -r is input
     random_address "$1" "$mac"
 
-else
+else # It otherwise will run the address_validation
     address_validation "$1" "$mac"
 fi
