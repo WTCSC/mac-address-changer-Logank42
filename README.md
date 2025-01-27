@@ -6,9 +6,9 @@ This is a script that will change the mac address of your machine. For those of 
 
 Both variations are simple to use, only needing a couple inputs:
 #### Python:
-    `sudo python3 pdaddy.py [network interface] [mac address / -r]`
-In the python variation, you can run this command, while replacing your network interface (To find your network interface, you can use `ip link show` to discover your interface) and your new mac address. Another option is using the -r command, which will assign you a new randomly generated mac address.
+    sudo python3 pdaddy.py [network interface] [mac address / -r]
+In the python variation, you can run this command above. You need to enter the network interface you want to use to change the mac address on, and your new mac address (To find your network interface, you can use `ip link show`, which will list your interfaces). Another option you can use is the -r command, which will assign you a randomly generated mac address.
 
 #### Shell:
-    `sudo ./changer.sh [network interface] [mac address / -r]`
-In the shell variation, you can run this command, while replacing your network interface (To find your network interface, you can use `ip link show` to discover your interface) and your new mac address. Another option is using the -r command, which will assign you a new randomly generated mac address.
+    sudo ./sdaddy.sh [network interface] [mac address / -r]
+In the shell variation, you can run this command above. You need to enter the network interface you want to use to change the mac address on, and your new mac address (To find your network interface, you can use `ip link show`, which will list your interfaces). Another option you can use is the -r command, which will assign you a randomly generated mac address.
